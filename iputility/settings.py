@@ -80,15 +80,24 @@ WSGI_APPLICATION = 'iputility.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#          'ENGINE': 'django.db.backends.postgresql',
+#          'NAME': 'iplist',
+#          'USER' : 'postgres',
+#          'PASSWORD' : '1',
+#          'Host' : 'localhost',
+#          'PORT' : 5432,
+#     }
+# }
+
+# RENDER LIVE DATABSE
+
+import dj_database_url
+
 DATABASES = {
-    'default': {
-         'ENGINE': 'django.db.backends.postgresql',
-         'NAME': 'iplist',
-         'USER' : 'postgres',
-         'PASSWORD' : '1',
-         'Host' : 'localhost',
-         'PORT' : 5432,
-    }
+    'default' : dj_database_url.parse('postgres://admin:jytgHcL1yZuqdVgo8GMDPLMWgRuHajkx@dpg-clgutkb1hq4c73bkhp80-a.oregon-postgres.render.com/iplist_fud1')
+ 
 }
 
 
